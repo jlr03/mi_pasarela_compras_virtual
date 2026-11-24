@@ -1,0 +1,116 @@
+/* ── TOKENS ──────────────────────────────────────────────── */
+:root {
+  --clay:    #C4714A;
+  --clay-dk: #9E4F2A;
+  --clay-lt: #E8C4AE;
+  --cream:   #F7F4EF;
+  --stone:   #E2DDD6;
+  --ink:     #1A1A18;
+  --mist:    #8A8680;
+  --ff-head: 'Playfair Display', Georgia, serif;
+}
+
+/* Bootstrap overrides */
+body { background-color: var(--cream) !important; color: var(--ink); }
+.font-head { font-family: var(--ff-head); }
+
+/* Accent color helpers */
+.text-clay  { color: var(--clay) !important; }
+.bg-clay    { background-color: var(--clay) !important; }
+.bg-cream   { background-color: var(--cream) !important; }
+.bg-stone   { background-color: var(--stone) !important; }
+.text-mist  { color: var(--mist) !important; }
+.border-clay{ border-color: var(--clay) !important; }
+
+/* Primary button clay */
+.btn-clay {
+  background-color: var(--clay);
+  border-color: var(--clay);
+  color: #fff;
+}
+.btn-clay:hover, .btn-clay:focus {
+  background-color: var(--clay-dk);
+  border-color: var(--clay-dk);
+  color: #fff;
+}
+.btn-outline-clay {
+  color: var(--clay);
+  border-color: var(--clay);
+  background: transparent;
+}
+.btn-outline-clay:hover {
+  background-color: var(--clay);
+  color: #fff;
+}
+
+/* ── SCREEN ROUTER ───────────────────────────────────────── */
+.screen { display: none; min-height: 100vh; flex-direction: column; }
+.screen.active { display: flex; }
+
+/* ── BOTTOM NAV PILL (prototipo) ─────────────────────────── */
+.screen-nav {
+  position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); border-radius: 32px; padding: 6px 8px;
+  display: flex; gap: 4px;
+  box-shadow: 0 8px 32px rgba(26,26,24,.4);
+  z-index: 9999;
+}
+.screen-nav button {
+  background: transparent; border: none;
+  color: rgba(255,255,255,.55);
+  font-size: 11px; font-weight: 600;
+  padding: 5px 12px; border-radius: 24px;
+  transition: all .2s; white-space: nowrap;
+}
+.screen-nav button.active { background: var(--clay); color: #fff; }
+.screen-nav button:hover:not(.active) { color: #fff; background: rgba(255,255,255,.12); }
+
+/* ── Category nav ────────────────────────────────────────── */
+.cat-nav { overflow-x: auto; border-bottom: 1px solid #dee2e6; }
+.cat-nav .nav-link { color: var(--mist); border-bottom: 2px solid transparent; border-radius: 0; white-space: nowrap; }
+.cat-nav .nav-link:hover,
+.cat-nav .nav-link.active { color: var(--clay); border-color: var(--clay); }
+
+/* ── Product card ────────────────────────────────────────── */
+.product-card { transition: transform .2s, box-shadow .2s; cursor: pointer; }
+.product-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.1) !important; }
+.product-img {
+  aspect-ratio: 3/4;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 36px; opacity: .35;
+}
+
+/* ── Size / color pickers ────────────────────────────────── */
+.size-btn { width: 38px; height: 38px; padding: 0; font-size: 13px; font-weight: 600; }
+.size-btn.active { background-color: var(--clay) !important; border-color: var(--clay) !important; color: #fff !important; }
+.color-dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  cursor: pointer; border: 2px solid transparent; transition: transform .15s;
+  display: inline-block;
+}
+.color-dot:hover { transform: scale(1.15); }
+.color-dot.active { border-color: var(--ink) !important; }
+
+/* ── Cart item thumbnail ─────────────────────────────────── */
+.cart-thumb {
+  width: 56px; height: 70px; border-radius: 6px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--stone), var(--clay-lt));
+}
+
+/* ── Step indicator ──────────────────────────────────────── */
+.step-connector { width: 40px; height: 2px; background: #dee2e6; }
+
+/* ── Shipping / payment option rows ─────────────────────── */
+.option-row { cursor: pointer; transition: border-color .15s, background .15s; }
+.option-row:hover, .option-row.active {
+  border-color: var(--clay) !important;
+  background-color: #fdf8f4 !important;
+}
+.option-row input[type=radio] { accent-color: var(--clay); }
+
+/* ── Misc ────────────────────────────────────────────────── */
+.badge-clay { background-color: var(--clay-lt); color: var(--clay-dk); }
+.form-control:focus, .form-select:focus { border-color: var(--clay); box-shadow: 0 0 0 .2rem rgba(196,113,74,.2); }
+.form-check-input:checked { background-color: var(--clay); border-color: var(--clay); }
+.navbar-brand span { color: var(--clay); }
+.summary-sticky { position: sticky; top: 76px; }
