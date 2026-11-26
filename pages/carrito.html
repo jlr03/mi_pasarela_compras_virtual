@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi carrito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <nav class="navbar navbar-light bg-white border-bottom sticky-top shadow-sm px-4">
+    <a class="navbar-brand font-head fw-bold fs-4" href="login.html">Mi <span>Gabinete</span> Virtual</a>
+    <div class="flex-grow-1 mx-4" style="max-width:360px;">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text bg-cream border-end-0"><i class="bi bi-search text-mist"></i></span>
+        <input type="text" class="form-control bg-cream border-start-0" placeholder="Encuentra prendas...">
+      </div>
+    </div>
+    <button class="btn btn-clay btn-sm rounded-pill">
+      <i class="bi bi-cart3"></i> 49,00 $ <span class="text-white-50 small">(1)</span>
+    </button>
+  </nav>
+
+  <div class="flex-grow-1 p-4">
+    <h1 class="font-head fs-3 mb-4">Mi carrito</h1>
+    <div class="row g-4 align-items-start">
+
+
+      <div class="col-lg-8">
+        <div class="card border shadow-sm">
+          <div class="card-body p-4">
+
+     
+            <div class="row g-2 pb-2 border-bottom small fw-bold text-uppercase text-mist d-none d-md-flex" style="font-size:11px;letter-spacing:.7px;">
+              <div class="col-6">Producto</div>
+              <div class="col-2">Color</div>
+              <div class="col-2">Cantidad</div>
+              <div class="col-2 text-end">Precio</div>
+            </div>
+
+     
+            <div class="row g-2 align-items-center py-3 border-bottom">
+              <div class="col-6 d-flex align-items-center gap-3">
+                <div class="cart-thumb"></div>
+                <div>
+                  <div class="fw-semibold small">Jersey Lana Premium</div>
+                  <div class="small text-mist">Talla S</div>
+                </div>
+              </div>
+              <div class="col-2"><span class="badge badge-clay rounded-pill">Azul marino</span></div>
+              <div class="col-2">
+                <div class="input-group input-group-sm" style="max-width:100px;">
+                  <button class="btn btn-outline-secondary">−</button>
+                  <input type="text" class="form-control text-center fw-semibold" value="1">
+                  <button class="btn btn-outline-secondary">+</button>
+                </div>
+              </div>
+              <div class="col-2 text-end font-head fw-semibold text-clay">49,00 $</div>
+            </div>
+
+     
+            <div class="row g-2 align-items-center py-3 border-bottom">
+              <div class="col-6 d-flex align-items-center gap-3">
+                <div class="cart-thumb" style="background:linear-gradient(135deg,var(--stone),#D5CFC6);"></div>
+                <div>
+                  <div class="fw-semibold small">Camisa Oxford</div>
+                  <div class="small text-mist">Talla M</div>
+                </div>
+              </div>
+              <div class="col-2"><span class="badge badge-clay rounded-pill">Blanco</span></div>
+              <div class="col-2">
+                <div class="input-group input-group-sm" style="max-width:100px;">
+                  <button class="btn btn-outline-secondary">−</button>
+                  <input type="text" class="form-control text-center fw-semibold" value="2">
+                  <button class="btn btn-outline-secondary">+</button>
+                </div>
+              </div>
+              <div class="col-2 text-end font-head fw-semibold text-clay">72,00 $</div>
+            </div>
+
+            <a href="catalogo.html" class="small text-mist d-block mt-3">Volver al catálogo</a>
+
+
+            <div class="mt-4">
+              <p class="text-uppercase small fw-bold text-mist mb-2" style="font-size:11px;letter-spacing:.8px;">Envío</p>
+              <div class="d-flex align-items-center gap-2 border rounded p-2 mb-2 option-row active">
+                <input type="radio" name="ship" class="form-check-input mt-0" checked>
+                <label class="small flex-grow-1 mb-0">Envío estándar (3-5 días)</label>
+                <span class="small fw-semibold text-clay">4,99 $</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 border rounded p-2 mb-2 option-row">
+                <input type="radio" name="ship" class="form-check-input mt-0">
+                <label class="small flex-grow-1 mb-0">Envío express (24h)</label>
+                <span class="small fw-semibold text-clay">9,99 $</span>
+              </div>
+              <div class="d-flex align-items-center gap-2 border rounded p-2 option-row">
+                <input type="radio" name="ship" class="form-check-input mt-0">
+                <label class="small flex-grow-1 mb-0">Recogida en tienda</label>
+                <span class="small fw-semibold text-clay">Gratis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+        <div class="card border shadow-sm p-4 summary-sticky">
+          <h3 class="font-head fs-5 mb-3">Resumen de la compra</h3>
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" class="form-control" placeholder="Introducir cupón">
+            <button class="btn btn-outline-secondary">Aplicar</button>
+          </div>
+          <div class="d-flex justify-content-between small mb-2"><span>Subtotal</span><span>121,00 $</span></div>
+          <div class="d-flex justify-content-between small mb-2"><span>Descuento</span><span class="text-success">−0,00 $</span></div>
+          <div class="d-flex justify-content-between small mb-2"><span>Envío</span><span>4,99 $</span></div>
+          <div class="d-flex justify-content-between small mb-2"><span>IVA (21%)</span><span>26,25 $</span></div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold mb-3"><span>Total</span><span class="text-clay fs-5">125,99 $</span></div>
+          <a href="envio.html" class="btn btn-clay w-100 py-2">Procesar pedido</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

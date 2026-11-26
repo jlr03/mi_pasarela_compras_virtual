@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forma de pago</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+
+  <nav class="navbar navbar-light bg-white border-bottom sticky-top shadow-sm px-4">
+    <a class="navbar-brand font-head fw-bold fs-4" href="login.html">Mi <span>Gabinete</span> Virtual</a>
+    <button class="btn btn-clay btn-sm rounded-pill">
+      <i class="bi bi-cart3"></i> 125,99 $
+    </button>
+  </nav>
+
+  <div class="flex-grow-1 p-4">
+
+  
+    <div class="d-flex align-items-center mb-4 gap-2 flex-wrap">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge rounded-circle bg-success" style="width:26px;height:26px;line-height:22px;">✓</span>
+        <span class="small fw-semibold text-success">Carrito</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge rounded-circle bg-success" style="width:26px;height:26px;line-height:22px;">✓</span>
+        <span class="small fw-semibold text-success">Dirección</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge rounded-circle bg-clay" style="width:26px;height:26px;line-height:22px;">3</span>
+        <span class="small fw-semibold text-clay">Pago</span>
+      </div>
+      <div class="step-connector"></div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge rounded-circle bg-secondary" style="width:26px;height:26px;line-height:22px;">4</span>
+        <span class="small fw-semibold text-mist">Confirmación</span>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-start">
+
+
+      <div class="col-lg-7">
+
+  
+        <div class="card border shadow-sm p-4 mb-3">
+          <h3 class="font-head fs-5 mb-3">Forma de pago</h3>
+
+          <div class="d-flex align-items-center gap-3 border rounded p-3 mb-2 option-row active">
+            <input type="radio" name="pay" class="form-check-input mt-0" checked>
+            <label class="small fw-medium flex-grow-1 mb-0">Tarjeta de crédito / débito</label>
+            <div class="d-flex gap-1">
+              <span class="badge bg-stone text-mist" style="font-size:9px;font-weight:700;">VISA</span>
+              <span class="badge bg-stone text-mist" style="font-size:9px;font-weight:700;">MC</span>
+              <span class="badge bg-stone text-mist" style="font-size:9px;font-weight:700;">AMEX</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-3 border rounded p-3 mb-2 option-row">
+            <input type="radio" name="pay" class="form-check-input mt-0">
+            <label class="small fw-medium flex-grow-1 mb-0">PayPal</label>
+            <span class="badge bg-stone text-mist" style="font-size:9px;font-weight:700;">PP</span>
+          </div>
+          <div class="d-flex align-items-center gap-3 border rounded p-3 mb-2 option-row">
+            <input type="radio" name="pay" class="form-check-input mt-0">
+            <label class="small fw-medium flex-grow-1 mb-0">Transferencia bancaria</label>
+          </div>
+          <div class="d-flex align-items-center gap-3 border rounded p-3 option-row">
+            <input type="radio" name="pay" class="form-check-input mt-0">
+            <label class="small fw-medium flex-grow-1 mb-0">Pago contra reembolso</label>
+          </div>
+        </div>
+
+
+        <div class="card border shadow-sm p-4 mb-3">
+          <h4 class="font-head fs-6 mb-3">Comentarios adicionales</h4>
+          <textarea class="form-control small" rows="3" placeholder="Añade un comentario (Opcional)"></textarea>
+          <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" id="gift">
+            <label class="form-check-label small" for="gift">Es un regalo</label>
+          </div>
+        </div>
+
+        <div class="form-check mb-4">
+          <input class="form-check-input" type="checkbox" id="terms">
+          <label class="form-check-label small text-mist" for="terms">
+            Acepto los <a href="#" class="text-clay">Términos de Uso</a> y la <a href="#" class="text-clay">Política de Privacidad</a>.
+          </label>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <a href="envio.html" class="btn btn-outline-secondary">Volver</a>
+          <a href="confirmacion.html" class="btn btn-clay px-4 py-2">Finalizar pedido</a>
+        </div>
+      </div>
+
+
+      <div class="col-lg-5">
+        <div class="card border shadow-sm p-4 summary-sticky">
+          <h3 class="font-head fs-5 mb-3">Resumen del pedido</h3>
+
+          <div class="alert bg-cream border-0 small p-3 mb-3">
+            <strong class="d-block text-uppercase text-mist mb-1" style="font-size:10px;letter-spacing:.7px;">Dirección de envío</strong>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
+            <span class="text-mist">Email: loremipsum · Tel.: 666 666 666</span>
+          </div>
+
+          <div class="d-flex gap-3 align-items-center pb-3 border-bottom mb-2">
+            <div class="cart-thumb flex-shrink-0"></div>
+            <div>
+              <div class="fw-semibold small">Jersey Lana Premium</div>
+              <div class="small text-mist">S · Azul marino × 1</div>
+            </div>
+          </div>
+          <div class="d-flex gap-3 align-items-center mb-3">
+            <div class="cart-thumb flex-shrink-0" style="background:linear-gradient(135deg,var(--stone),#D5CFC6);"></div>
+            <div>
+              <div class="fw-semibold small">Camisa Oxford</div>
+              <div class="small text-mist">M · Blanco × 2</div>
+            </div>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between small mb-1"><span>Subtotal</span><span>121,00 $</span></div>
+          <div class="d-flex justify-content-between small mb-1"><span>Descuento</span><span class="text-success">−0,00 $</span></div>
+          <div class="d-flex justify-content-between small mb-1"><span>Envío</span><span>4,99 $</span></div>
+          <div class="d-flex justify-content-between small mb-1"><span>IVA</span><span>26,25 $</span></div>
+          <hr>
+          <div class="d-flex justify-content-between fw-bold"><span>Total</span><span class="text-clay fs-5">125,99 $</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo – Mi Gabinete Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+
+  <nav class="navbar navbar-light bg-white border-bottom sticky-top shadow-sm px-4">
+    <a class="navbar-brand font-head fw-bold fs-4" href="login.html">Mi <span>Gabinete</span> Virtual</a>
+    <div class="flex-grow-1 mx-4" style="max-width:360px;">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text bg-cream border-end-0"><i class="bi bi-search text-mist"></i></span>
+        <input type="text" class="form-control bg-cream border-start-0" placeholder="Encuentra prendas...">
+      </div>
+    </div>
+    <a href="carrito.html" class="btn btn-clay btn-sm rounded-pill d-flex align-items-center gap-2">
+      <i class="bi bi-cart3"></i> 0,00 $ <span class="text-white-50 small">(0)</span>
+    </a>
+  </nav>
+
+  <nav class="navbar navbar-light bg-white px-4 cat-nav">
+    <ul class="nav nav-underline flex-nowrap">
+      <li class="nav-item"><a class="nav-link active" href="#">Jerseys</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Camisas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Camisetas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Pantalones</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Chándales</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Chaquetas</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Abrigos</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Accesorios</a></li>
+    </ul>
+  </nav>
+
+  <div class="flex-grow-1 p-4">
+    <div class="row g-4">
+
+
+      <aside class="col-md-3 col-lg-2">
+        <div class="card border shadow-sm p-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <span class="fw-bold small">FILTROS</span>
+            <a href="#" class="small text-mist">Borrar todos</a>
+          </div>
+
+          <p class="text-uppercase small fw-bold text-mist mb-2" style="font-size:11px;letter-spacing:.8px;">Precio</p>
+          <div class="d-flex align-items-center gap-2 mb-2">
+            <input type="number" class="form-control form-control-sm bg-cream" value="0" style="width:64px;">
+            <span class="text-mist">–</span>
+            <input type="number" class="form-control form-control-sm bg-cream" value="200" style="width:64px;">
+          </div>
+          <span class="badge badge-clay rounded-pill mb-3">Ofertas</span>
+
+          <p class="text-uppercase small fw-bold text-mist mb-2" style="font-size:11px;letter-spacing:.8px;">Marca</p>
+          <div class="mb-1">
+            <span class="badge badge-clay rounded-pill me-1">M1</span>
+            <span class="badge bg-stone text-dark rounded-pill me-1">M2</span>
+            <span class="badge bg-stone text-dark rounded-pill">M3</span>
+          </div>
+          <a href="#" class="small text-clay d-block mb-3">Ver más ▾</a>
+
+          <p class="text-uppercase small fw-bold text-mist mb-2" style="font-size:11px;letter-spacing:.8px;">Talla</p>
+          <div class="mb-1">
+            <span class="badge bg-stone text-dark rounded-pill me-1">T1</span>
+            <span class="badge badge-clay rounded-pill me-1">T2</span>
+            <span class="badge bg-stone text-dark rounded-pill me-1">T3</span>
+            <span class="badge bg-stone text-dark rounded-pill">T4</span>
+          </div>
+          <a href="#" class="small text-clay d-block">Ver más ▾</a>
+        </div>
+      </aside>
+
+      <div class="col-md-9 col-lg-10">
+        <div id="product-grid" class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 mb-4"></div>
+
+        <nav aria-label="Paginación">
+          <ul class="pagination justify-content-center">
+            <li class="page-item"><a class="page-link link-dark" href="#">‹</a></li>
+            <li class="page-item active"><a class="page-link bg-clay border-clay" href="#">1</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">2</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">3</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">4</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">5</a></li>
+            <li class="page-item disabled"><a class="page-link link-dark" href="#">…</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">10</a></li>
+            <li class="page-item"><a class="page-link link-dark" href="#">›</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const colors = ['#D4C5B0', '#B8C4C2', '#C4A882', '#9CB4B8', '#D4B8A0', '#B8B0A8', '#C8B8A0', '#A8C0B0', '#D0C0A8', '#B0B8C0', '#C8A890', '#A8B8C8'];
+    const names = ['Jersey Lana', 'Camisa Oxford', 'Camiseta Basic', 'Pantalón Slim', 'Jersey Punto', 'Camisa Lino', 'Camiseta Print', 'Chaqueta Knit', 'Abrigo Largo', 'Jersey Cuello', 'Camisa Casual', 'Pantalón Wide'];
+    document.getElementById('product-grid').innerHTML = names.map((n, i) => `
+      <div class="col">
+        <a href="producto.html" class="text-decoration-none text-dark">
+          <div class="card product-card h-100 border">
+            <div class="product-img rounded-top position-relative" style="aspect-ratio:3/4;background:linear-gradient(135deg,${colors[i]}88,${colors[(i + 3) % 12]}88);display:flex;align-items:center;justify-content:center;font-size:36px;opacity:.5;">
+              👕
+              ${i === 1 || i === 5 ? '<span class="badge badge-clay position-absolute top-0 end-0 m-2">Oferta</span>' : ''}
+            </div>
+            <div class="card-body p-2">
+              <div class="fw-semibold small">${n}</div>
+              <div class="font-head fw-semibold text-clay">${(29 + i * 7).toFixed(2)} $</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    `).join('');
+  </script>
+</body>
+
+</html>
